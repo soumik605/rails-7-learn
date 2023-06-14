@@ -95,7 +95,6 @@ GEM
       responders
       warden (~> 1.2.3)
     erubi (1.12.0)
-    erubis (2.7.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     haml (6.1.1)
@@ -107,11 +106,6 @@ GEM
       activesupport (>= 5.1)
       haml (>= 4.0.6)
       railties (>= 5.1)
-    html2haml (2.3.0)
-      erubis (~> 2.7.0)
-      haml (>= 4.0)
-      nokogiri (>= 1.6.0)
-      ruby_parser (~> 3.5)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     importmap-rails (1.1.6)
@@ -194,14 +188,14 @@ GEM
       actionpack (>= 5.2)
       railties (>= 5.2)
     rexml (3.2.5)
-    ruby_parser (3.20.0)
-      sexp_processor (~> 4.16)
     rubyzip (2.3.2)
     selenium-webdriver (4.10.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sexp_processor (4.16.1)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     sprockets (4.2.0)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -251,7 +245,6 @@ DEPENDENCIES
   debug
   devise
   haml-rails
-  html2haml
   importmap-rails
   jbuilder
   pg (~> 1.1)
@@ -259,6 +252,7 @@ DEPENDENCIES
   rails (~> 7.0.5)
   redis (~> 4.0)
   selenium-webdriver
+  simple_form (~> 5.1.0)
   sprockets-rails
   stimulus-rails
   tailwindcss-rails

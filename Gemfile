@@ -76,3 +76,4 @@ end
 gem "devise" 
 gem 'haml-rails'
 gem 'tailwindcss-rails'
+gem "simple_form", "~> 5.1.0"
