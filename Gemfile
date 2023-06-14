@@ -74,3 +74,5 @@ end
 
 
 gem "devise" 
+gem 'haml-rails'
+gem 'tailwindcss-rails'
