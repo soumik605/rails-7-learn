@@ -1,6 +1,6 @@
-%tr.bg-white.border-b.dark:bg-gray-800.dark:border-gray-700
-  %th.px-6.py-4.font-medium.text-gray-900.whitespace-nowrap.dark:text-white{:scope => "row"}
+.bg-white.border-b.dark:bg-gray-800.dark:border-gray-700.flex.justify-between.my-1
+  .px-6.py-4.font-medium.text-gray-900.whitespace-nowrap.dark:text-white{:scope => "row"}
     = link_to quote.name, quote_path(quote)
-  %td.px-6.py-4.flex.gap-6.items-center
+  .px-6.py-4.flex.gap-6.items-center
     = link_to "Edit", edit_quote_path(quote), {class: "font-medium text-blue-600 dark:text-blue-500 hover:underline"}
     = button_to "Delete", quote_path(quote), method: :delete, class: "font-medium text-red-600 dark:text-red-500 hover:underline"
