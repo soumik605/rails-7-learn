@@ -2,4 +2,5 @@
   = link_to sanitize("← Back to quote"), quote_path(@quote)
   .header
     %h1 Edit quote
-  = render "form", quote: @quote
+  = turbo_frame_tag @quote do
+    = render "form", quote: @quote
