@@ -2,5 +2,7 @@
   .px-6.py-4.font-medium.text-gray-900.whitespace-nowrap.dark:text-white{:scope => "row"}
     = link_to quote.name, quote_path(quote)
   .px-6.py-4.flex.gap-6.items-center
-    = link_to "Edit", edit_quote_path(quote), {class: "font-medium text-blue-600 dark:text-blue-500 hover:underline"}
+    = link_to "Edit", edit_quote_path(quote), {data: { turbo_frame: "edit_quote_#{quote.id}" }, class: "font-medium text-blue-600 dark:text-blue-500 hover:underline"}
     = button_to "Delete", quote_path(quote), method: :delete, class: "font-medium text-red-600 dark:text-red-500 hover:underline"
+
+= turbo_frame_tag "edit_quote_#{quote.id}"
