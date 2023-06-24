@@ -1,5 +1,7 @@
+= turbo_stream_from @quote
+
 %main.container
   = link_to sanitize("← Back to quotes"), quotes_path
   .header
-    %h1
-      = @quote.name
+    = turbo_frame_tag @quote do
+      = render 'quotes/quote_details', quote: @quote

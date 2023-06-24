@@ -1,0 +1,6 @@
+= turbo_stream_from "quote_details_#{quote.id}"
+
+= turbo_frame_tag "quote_details_#{quote.id}" do
+  .p-4.mt-4.bg-slate-300 
+    %h1
+      = quote.name
