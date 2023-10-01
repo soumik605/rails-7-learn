@@ -1,0 +1,18 @@
+databases:
+  - name: rails_7_learn_production
+    databaseName: rails_7_learn_production
+    user: mysite
+
+services:
+  - type: web
+    name: mysite
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: postgres://mysite:MbwRaBUlEUoCDh7x3WawhsYUEOrwWkXN@dpg-ckc3u0kiibqc73e4j0i0-a/rails_7_learn_production
+        fromDatabase:
+          name: rails_7_learn_production
+          property: connectionString
+      - key: 53c3e213d3abb3b8cf829b459978a3df
+        sync: false
